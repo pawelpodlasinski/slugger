@@ -8,12 +8,18 @@ use function implode;
 
 class Slugger
 {
+    /** @var string */
+    private static $salt = 'slugger';
+
+    /** @var int */
+    private static $minHashLength = 8;
+
     /**
      * @return Hashids
      */
     private static function init(): Hashids
     {
-        return new Hashids('Wykop', 8);
+        return new Hashids(self::$salt, self::$minHashLength);
     }
 
     /**
@@ -24,6 +30,16 @@ class Slugger
     private static function isValidNumber(int $number): bool
     {
         return $number > 0;
+    }
+
+    /**
+     * @param string $salt
+     * @param int $minHashLength
+     */
+    public static function setUp(?string $salt = null, int $minHashLength = 8): void
+    {
+        self::$salt = $salt ?? \uniqid('', false);
+        self::$minHashLength = $minHashLength;
     }
 
     /**

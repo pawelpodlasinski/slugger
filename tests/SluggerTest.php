@@ -8,6 +8,12 @@ use PHPUnit\Framework\TestCase;
 
 class SluggerTest extends TestCase
 {
+    protected function setUp(): void
+    {
+        parent::setUp();
+        Slugger::setUp('test', 8);
+    }
+
     /**
      * @test
      * @dataProvider numberProvider
@@ -37,11 +43,11 @@ class SluggerTest extends TestCase
      */
     public function numberProvider(): Generator
     {
-        yield [1, 'v9reEr0e'];
-        yield [1234, '3z2v43rM'];
-        yield [100000, 'vxoX36P2'];
+        yield [1, 'wedgpzLR'];
+        yield [1234, '8RdZnYdx'];
+        yield [100000, 'vz1evykz'];
         yield [0, '0'];
-        yield [9999999999999999, '45kDWkymg4p'];
+        yield [9999999999999999, 'kvMJlMqmXLj'];
     }
 
     /**
@@ -73,10 +79,10 @@ class SluggerTest extends TestCase
      */
     public function complexNumberProvider(): Generator
     {
-        yield ['1-2-3', 'r87Uysvw'];
-        yield ['1', 'v9reEr0e'];
-        yield ['12-24-35', '2Enudc3w'];
-        yield ['1125125-155152153', 'PkRmGhGdeMX'];
-        yield ['1-2-3-4-5-6-7-8-9', 'eEU9sZHqCAizhdFWIJ'];
+        yield ['1-2-3', 'a9mc2s0a'];
+        yield ['1', 'wedgpzLR'];
+        yield ['12-24-35', 'zn2CnTbz'];
+        yield ['1125125-155152153', 'bL9VDfGLOeR'];
+        yield ['1-2-3-4-5-6-7-8-9', 'gpcEsnu4U9iRF3fPIN'];
     }
 }
