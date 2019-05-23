@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace OpenWykop\Slugger;
 
 use Hashids\Hashids;
 use function explode;

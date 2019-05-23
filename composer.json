@@ -1,5 +1,5 @@
 {
-  "name": "pawelpodlasinski/slugger",
+  "name": "wykop-pl/slugger",
   "description": "Convert int to slug and decode",
   "type": "library",
   "authors": [
@@ -19,12 +19,12 @@
   "prefer-stable": true,
   "autoload": {
     "psr-4": {
-      "App\\": "src/"
+      "OpenWykop\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "App\\Tests\\": "tests/"
+      "OpenWykop\\Tests\\": "tests/"
     }
   }
 }
