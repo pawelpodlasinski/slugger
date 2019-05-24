@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Tests;
+namespace Gaffa\Tests;
 
-use App\Slugger;
+use Gaffa\Slugger;
 use Generator;
 use PHPUnit\Framework\TestCase;
 

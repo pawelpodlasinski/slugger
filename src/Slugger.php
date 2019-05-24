@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Gaffa;
 
 use Hashids\Hashids;
 use function explode;
